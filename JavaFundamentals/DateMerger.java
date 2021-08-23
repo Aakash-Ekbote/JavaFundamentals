@@ -6,6 +6,7 @@ import java.util.*;
 public class DateMerger {
     public List<DateRange> mergeDateRange(List<DateRange> dateRanges)
     {
+        Collections.sort(dateRanges);
         List<DateRange> res=new ArrayList<>();
         LocalDate start=dateRanges.get(0).getStartDate();
         LocalDate end=dateRanges.get(0).getEndDate();
